@@ -6,11 +6,11 @@
 
 using namespace std;
 
-void GetFilesNames(char* dirrectorline2, vector<string> &fileNames) {
+void GetFilesNames(char* dirrectory, vector<string> &fileNames) {
     DIR *d;
     struct dirent *dir;
 
-    d = opendir(dirrectorline2);
+    d = opendir(dirrectory);
     if (d) {
         while ((dir = readdir(d)) != NULL) {
             fileNames.push_back(dir->d_name);
